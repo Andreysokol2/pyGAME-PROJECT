@@ -10,5 +10,6 @@ pygame.display.set_caption('pygame_game')
 player = Player(screen)
 
 while True:
-    gf.update_screen(screen)
-    gf.check_events()
+    gf.update_screen(screen, player)
+    player.update()
+    gf.check_events(player)
